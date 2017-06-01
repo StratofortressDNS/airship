@@ -23,7 +23,7 @@
         <div class="body">
 
 
-        <webview src="views/intro.html" onload="resizeIframe(this)" nodeintergration></webview>
+        <webview id="contain" src="views/intro.html" onload="resizeIframe(this)" nodeintegration></webview>
         
 
         </div>
@@ -31,8 +31,10 @@
     </div>
 
 <script>
-  var webview = document.getElementsByTagName("webview");
-  webview.addEventListener("dom-ready", function(){ webview.openDevTools(); });
+  var webview = document.getElementById('contain');
+  webview.addEventListener("dom-ready", function(){
+    webview.openDevTools();
+  });
 </script>
 
 </body>
