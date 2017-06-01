@@ -112,7 +112,8 @@ small, .font_small {font-size: 0.833em;}
     width: .7vw
 }
 
-iframe {
+webview {
     width: 50vw;
     border: none;
+    height: 40vh
 }

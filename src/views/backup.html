@@ -41,8 +41,14 @@ small, .font_small {font-size: 0.833em;}
 
 </head>
 <body>
-        <h2>Switch to Stratofortress DNS</h2>
-        <p>Welcome! This tool will change your <b>primary</b> DNS server to Stratofortress'.</p>
-        <button onclick="window.location.href = '../views/backup.html'">Next</button>
+        <h2>Backup</h2>
+        <p>This is what your DNS settings are currently set to:</p>
+        <script>
+            var getDNS = require('../js/getDNS.js')
+            document.write('<p>' + getDNS + '</p>')
+            console.log(getDNS)
+        </script>
+        <p><b>Save these somewhere before continuing!</b></p>
+        <button onclick="window.location.href = 'views/backup.html'">Next</button>
 </body>
 </html>

@@ -23,11 +23,17 @@
         <div class="body">
 
 
-        <iframe src="views/intro.html" scrolling="no" onload="resizeIframe(this)"></iframe>
+        <webview src="views/intro.html" onload="resizeIframe(this)" nodeintergration></webview>
         
 
         </div>
         </div>
     </div>
+
+<script>
+  var webview = document.getElementsByTagName("webview");
+  webview.addEventListener("dom-ready", function(){ webview.openDevTools(); });
+</script>
+
 </body>
 </html>
